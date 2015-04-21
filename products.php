@@ -14,13 +14,9 @@ require_once('login.php');
 	<script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
 	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" />
 	<link type="text/css" rel="stylesheet" href="css/loginbox.css" />
-	<script type="text/javascript"
-    id="snipcart"
-    src="https://app.snipcart.com/scripts/snipcart.js"
+	<script type="text/javascript" id="snipcart" src="https://app.snipcart.com/scripts/snipcart.js"
     data-api-key="ZTIyNzAwMTYtOThjZC00NDcxLThlYjYtOGVmNmYzYjIwMTk5"></script>
-	<link id="snipcart-theme" type="text/css"
-    href="https://app.snipcart.com/themes/base/snipcart.css"
-    rel="stylesheet">
+	<link id="snipcart-theme" type="text/css" href="https://app.snipcart.com/themes/base/snipcart.css" rel="stylesheet">
   </head>
   
   <body>
@@ -50,14 +46,14 @@ require_once('login.php');
       </form>
       <ul class="nav navbar-nav navbar-right">
 		<?php if ($_SESSION['kirjautunut'] == 'juujuu'): ?>
-			  <li><a href="<?php echo $_SERVER['PHP_SELF']; ?>?action=logout">Logout</a></li>
-			  <?php else: ?>
-			  <li><a id="modal_trigger" href="#modal" action="loginpopup.php">Log In</a></li>
-			  <?php endif;?>
-			  <span class="snipcart-summary">
-    Number of items: <span class="snipcart-total-items"></span>
-    Total price: <span class="snipcart-total-price"></span>
-</span>
+		<li><a href="<?php echo $_SERVER['PHP_SELF']; ?>?action=logout">Logout</a></li>
+		<?php else: ?>
+		<li><a id="modal_trigger" href="#modal" action="loginpopup.php">Log In</a></li>
+		<?php endif;?>
+		<span class="snipcart-summary">
+			Number of items: <span class="snipcart-total-items"></span>
+			Total price: <span class="snipcart-total-price"></span>
+		</span>
       </ul>
 		<div id="modal" class="popupContainer" style="display:none;">
 			<header class="popupHeader">
@@ -142,8 +138,8 @@ require_once('login.php');
     </div>
     <div class="neighborhood-guides">
         <div class="container">
-            <h2>Popular Pokemons</h2>
-            <p>THE most popular pokemons that you will want to buy</p>
+            <h2>Products</h2>
+            <p>Our extensive catalog where you'll find everything you need</p>
             <a href="#"
 			class="snipcart-add-item"
 			data-item-id="2"
@@ -154,29 +150,28 @@ require_once('login.php');
 			data-item-description="Some fresh bacon">
 			Buy bacon
 			</a>
-            <div class="row">
-                <div class = "col-md-4">
-                    <div class = "thumbnail">
-                        <img src="http://i.ytimg.com/vi/Eghk9bVNN9M/maxresdefault.jpg">
-                    </div>
-                      <div class = "thumbnail">
-                        <img src="http://goo.gl/an2HXY">
-                    </div>
-                </div>
-                <div class = "col-md-4">
-                    <div class = "thumbnail">
-                        <img src="http://goo.gl/Av1pac">
-                    </div>
-                      <div class = "thumbnail">
-                        <img src="http://goo.gl/vw43v1">
-                    </div>
-                </div>
-                <div class = "col-md-4">
-                    <div class = "thumbnail">
-                        <img src="http://goo.gl/0Kd7UO">
-                    </div>
-                </div>
-            </div>
+			<div class="row">
+			  <div class="col-sm-6 col-md-4">
+				<div class="thumbnail">
+				  <img src="http://cdn.bulbagarden.net/upload/thumb/2/21/001Bulbasaur.png/240px-001Bulbasaur.png" alt="bulbasaur">
+				  <div class="caption">
+					<h3>Bulbasaur</h3>
+					<p>Bulbasaurness</p>
+					<p><a href="#" class="btn btn-default" role="button">Buy</a></p>
+				  </div>
+				</div>
+			  </div>
+			  <div class="col-sm-6 col-md-4">
+				<div class="thumbnail">
+				  <img src="http://cdn.bulbagarden.net/upload/thumb/3/39/007Squirtle.png/240px-007Squirtle.png" alt="bulbasaur">
+				  <div class="caption">
+					<h3>Squirtle</h3>
+					<p>SquirtSquirt</p>
+					<p><a href="#" class="btn btn-default" role="button">Buy</a></p>
+				  </div>
+				</div>
+			  </div>
+			</div>
         </div>
     </div>
 

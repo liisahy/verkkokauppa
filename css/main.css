@@ -61,4 +61,8 @@
 .neighborhood-guides p {
     font-size: 15px;
     margin-bottom: 13px;
-    }    
+    }
+
+.caption{
+	text-align: right;
+}    
